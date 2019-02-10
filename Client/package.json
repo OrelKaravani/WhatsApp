@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://localhost:5000/",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --open --hot && cd ../Server && nodemon server.js",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +25,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "socket.io-client": "^2.2.0"
